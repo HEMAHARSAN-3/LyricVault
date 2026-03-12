@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-50: #f9f9f9;
+  --color-blue-100: #f9f9f9;
+  --color-blue-200: #e5e5e5;
+  --color-blue-300: #e5e5e5;
+  --color-blue-400: #cccccc;
+  --color-blue-500: #333333;
+  --color-blue-600: #1a1a1a;
+  --color-blue-700: #1a1a1a;
+  --color-blue-800: #0d0d0d;
+  --color-blue-900: #000000;
+  --color-blue-950: #000000;
+
+  --color-sky-50: #f9f9f9;
+  --color-sky-100: #f9f9f9;
+  --color-sky-200: #e5e5e5;
+  --color-sky-300: #e5e5e5;
+  --color-sky-400: #cccccc;
+  --color-sky-500: #333333;
+  --color-sky-600: #1a1a1a;
+  --color-sky-700: #1a1a1a;
+  --color-sky-800: #0d0d0d;
+  --color-sky-900: #000000;
+  --color-sky-950: #000000;
+  
+  --color-indigo-50: #f9f9f9;
+  --color-indigo-100: #f9f9f9;
+  --color-indigo-200: #e5e5e5;
+  --color-indigo-300: #e5e5e5;
+  --color-indigo-400: #cccccc;
+  --color-indigo-500: #333333;
+  --color-indigo-600: #1a1a1a;
+  --color-indigo-700: #1a1a1a;
+  --color-indigo-800: #0d0d0d;
+  --color-indigo-900: #000000;
+  --color-indigo-950: #000000;
+
+  --color-cyan-50: #f9f9f9;
+  --color-cyan-100: #f9f9f9;
+  --color-cyan-200: #e5e5e5;
+  --color-cyan-300: #e5e5e5;
+  --color-cyan-400: #cccccc;
+  --color-cyan-500: #333333;
+  --color-cyan-600: #1a1a1a;
+  --color-cyan-700: #1a1a1a;
+  --color-cyan-800: #0d0d0d;
+  --color-cyan-900: #000000;
+  --color-cyan-950: #000000;
+
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9F9F9;
+  --color-text-primary: #1A1A1A;
+  --color-interactive: #333333;
+  --color-interactive-hover: #1A1A1A;
+  --color-border-subtle: #E5E5E5;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary antialiased min-h-screen text-base;
+    box-shadow: none !important;
+  }
+  #root {
+    @apply w-full min-h-screen bg-bg-primary;
+    box-shadow: none !important;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-text-primary focus:ring-offset-2;
+  }
+  
+  .glass-header {
+    @apply bg-bg-primary/80 backdrop-blur-md border-b border-border-subtle;
+  }
+  
+  .card-base {
+    @apply bg-bg-primary border border-border-subtle rounded-xl shadow-sm hover:shadow-md transition-shadow;
+  }
+}
